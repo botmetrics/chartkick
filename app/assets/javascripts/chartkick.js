@@ -807,6 +807,9 @@
         };
 
         var defaultOptions = {
+          line: {
+            borderWidth: 2
+          },
           scales: {
             yAxes: [
               {
@@ -1000,8 +1003,7 @@
               fill: chartType === "area",
               borderColor: colors[i],
               backgroundColor: backgroundColor,
-              pointBackgroundColor: colors[i],
-              borderWidth: 2
+              pointBackgroundColor: colors[i]
             };
 
             datasets.push(merge(dataset, s.library || {}));
