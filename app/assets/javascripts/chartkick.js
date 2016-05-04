@@ -798,6 +798,17 @@
             ],
             xAxes: [
               {
+                ticks: {
+                  maxRotation: 0,
+                  userCallback: function(v, i, values) {
+                    var index = Math.floor(values.length / 8);
+                    if(values.length <= 8) {
+                      return v;
+                    } else {
+                      return (i % index) == 0 ? v : '';
+                    }
+                  }
+                },
                 gridLines: {
                   drawOnChartArea: false
                 },
